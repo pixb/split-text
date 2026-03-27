@@ -1,0 +1,22 @@
+[project]
+name = "split-text"
+version = "0.1.0"
+description = "将长文本按语义拆分为较小片段的工具"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.0",
+    "jieba>=0.42.0",
+]
+
+[project.scripts]
+split-text = "split_text.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+]
